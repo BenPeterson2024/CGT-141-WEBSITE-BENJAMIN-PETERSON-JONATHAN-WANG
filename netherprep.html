@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Webpage Nether-Prep</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('background_images/minecraft_obsidian.jpg');
+      background-repeat: repeat;
+      background-size: 100vw auto;
+      background-attachment: scroll;
+      background-position: center top;
+      background-color: #b88a4d;
+      font-family: 'VT323', monospace;
+      line-height: 1.4;
+      min-height: 100vh;
+      transition: background-position 2s;
+    }
+
+    .title-container {
+  text-align: center;
+  padding: 40px 20px 20px;
+  margin-top: 20px;
+}
+
+
+
+
+h1 {
+  font-size: 70px;
+  margin: 0;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: -1px;
+  text-shadow: 
+    3px 3px 0 #2f2f2f,
+    1px 1px 0 #2f2f2f,
+    2px 2px 0 #2f2f2f,
+    3px 3px 0 #2f2f2f,
+    4px 4px 0 #2f2f2f,
+    5px 5px 0 #2f2f2f,
+    -1px -1px 0 rgba(255,255,255,0.3);
+  transform: perspective(100px) rotateX(5deg);
+}
+
+    .title-container {
+      text-align: center;
+      padding: 40px 20px 20px;
+      margin-top: 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      margin: 20px auto;
+      max-width: 95%;
+      padding: 10px;
+    }
+
+    .content-block {
+      background-image: url('background_images/minecraft_stone.jpg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      aspect-ratio: 16 / 9;
+      border: 3px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 0 #4C2F00;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 8px 0 rgba(0,0,0,0.3);
+      filter: brightness(1.3);
+    }
+
+    .content-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 15px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
+    }
+
+    .welcome-message {
+      font-size: 36px;
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 0 #000000;
+      margin: 40px auto;
+      max-width: 80%;
+    }
+
+    .body-text {
+      font-size: 36px;
+      color: white;
+      text-align: left;
+      text-shadow: 2px 2px 0 #000000;
+      margin: 40px auto;
+      max-width: 80%;
+    }
+
+    .main-image {
+  display: block;
+  margin: 50px auto;
+  width: 55%;
+  height: auto;
+  border: 4px solid white;
+  box-sizing: border-box;
+  }
+    
+
+    .scroll-test {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .vignette-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 12.5vh;
+      pointer-events: none;
+      z-index: 9999;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    }
+
+    @media (max-width: 1200px) {
+      .content-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="title-container">
+    <h1>MINECRAFT</h1>
+  </div>
+
+  <div class="content-grid">
+    <a href="index.html" class="content-block">HOME</a>
+    <a href="mechanics.html" class="content-block">GAME MECHANICS</a>
+    <a href="spawn.html" class="content-block">SPAWN</a>
+    <a href="nether-prep.html" class="content-block">NETHER PREPARATIONS</a>
+    <a href="nether.html" class="content-block">NETHER</a>
+    <a href="endprep.html" class="content-block">END PREPARATIONS</a>
+    <a href="endgame.html" class="content-block">ENDGAME</a>
+    <a href="about.html" class="content-block">ABOUT US</a>
+  </div>
+  
+    
+  <p class="welcome-message">Nether Preparations!</p>
+
+  <img src="nether_prep_images/nether_prep_image_nether_portal_html.jpg" alt="Main Image" class="main-image">
+  
+  <p class="body-text">Hopefully by this point, the night has passed. You're probably getting hungry and need food.
+    Remember the passive Mobs we had talked about in the last section. These passive Mobs like to spawn in Grassland biomes. 
+    If you're not in a Grassland, you can still find them spawn on grass. They're just not as common and harder to see.
+    Rabbits are another edible mob which will also spawn in the desert.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_rabbit_html.webp" alt="Main Image" class="main-image">
+
+  <p class="body-text">Go and find one of these mobs to practice our combat. Minecraft combat is somewhat complicated.
+    Switch to your axe in your hotbar. You'll notice how it takes time to appear on your screen, and how there is a bar underneath of the crosshair.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_axe_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">This bar needs to be full in order to maximize damage. 
+    If you spam click, you will reduce the durability of your tools greatly, on top of doing little to no damage.
+    You can easily tell when the charge up is complete, by when the tool has stopped moving upwards on the side of the screen.
+    The bar underneath of the crosshair works just as good as well.
+    The two best tools for combat is the axe, and the sword.
+    The axe has a really long cool down time before its ready to swing again.
+    The swords is far shorter but suprisingly does less damage.
+    This guide recommends using the sword, especially for beginners.
+    There is another way to maximize damage and that is by doing critical hits.
+    You can tell if you have done a critical hit easily. If tan stars come out of the Mob you're attacking, you've done a critical hit.
+    Critical hits are achieved by jumping, and hitting the Mob on the downfall of the jump. The swing has to be done before you hit the ground.
+    Below is an example of a critical hit.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_crit_hit_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Below is a regular hit.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_reg_hit_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Now that you know the difference, practice by killing some passive mobs, not only get lots of food, but to also practice combat!
+    Also try to kill enough sheep to get three wool blocks of the same color. This will come important later!
+  </p>
+  <p class="body-text">Once you're done with that, lets make a chest to store your food and other items.
+    A chest is the same crafting recipe as a furnace, but is made out of planks instead.
+    Here is an example in case you forgot.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_chest_recipe_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Go ahead and make two chests. Chests can be combined but it caps at two. The chests also have to be facing the same direction to combine.
+    A single double chest holds just as much as two regular chests.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_single_chest_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_image_double_chest_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_image_triple_chest_html.png" alt="Main Image" class="main-image">
+  
+
+  <p class="body-text">Place down your two chests next to eachother to make your double chest.
+    Right click on the chest to open it. 
+    Keep your valuables in your chest in case you die. This is so you don't lose them.
+    Chests are also great for storing items you don't currently need in you're inventory to free up space!
+  </p>
+
+  <p class="body-text">Remember the three wool of the same color you were told to grab? Well this is the part where you need the wool.
+    So if you don't have it now, go kill some sheep to get some!
+    Now we are going to make a bed. Beds require three wool of the same color, and three planks of the same type.
+    Go to your crafting table. Fill the top row from left to right with your wool. Fill the middle row from left to right with your planks.
+    Now you have your bed! Place your bed inside your home where it's nice and safe.
+    Go ahead and right click on your bed. If it's night time, you'll fall asleep, as well as setting your spawn point!
+    If it's daytime, you'll only set your spawn point.
+    You're spawn point is the location that you will respawn if you die.
+    If you don't have a spawn point saved, you will respawn at the world spawn.
+    If you're bed gets destroyed, you will no longer have a spawn point. 
+    To fix this, you will need to place a bed down and right click on it again.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_bed_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_image_sleep_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Now we will get ready to mine. Before mining, you'll want a few things. Firstly is a handful of pickaxes.
+    For stone pickaxes, bring around four to five. You will also want two to three stacks of torches. 
+    You can also bring a stack of oak planks or sticks as well to make torches as you mine. There is naturally spawning coal ore veins in the ground.
+    Coal ore looks like the image below.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_coal_ore_image_html.webp" alt="Main Image" class="main-image">
+
+  <p class="body-text">Another thing to note is your tools durability. 
+    The reason why it's recommended to bring four to five stone pickaxes, is because your tools lose durability as you use them. 
+    The durability bar is located underneath of the tool. 
+    The durability bar both goes down, and changes color in order to signify the remaining durability.
+    As you can see in the image below, the wooden pickaxe is at about half durability.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_pickaxe_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">You are now ready for the mines! Right now, we are going to be mining for iron. Iron ore looks like the following.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_iron_ore_html.avif" alt="Main Image" class="main-image">
+
+  <p class="body-text">You will want to traverse to a Y level of 15 to find the most amount of iron. In order to determine your Y level, hit f3 on your keyboard.
+    Circled in red is your Y level. You will have to dig down to reach a Y level of 15. There is an unspoken rule of Minecraft.
+    Never dig straight down! There are safe ways to do this, but because you will be returning to your mineshaft, go ahead and dig a staircase down to this level.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_f3_Y_level_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Don't bring anything too valuable with you into the mines as you may die to hostile Mobs in a cave!
+    You can always go back and pick up your items, but they will despawn, or disappear, after 5 minutes of being near them. (This is everywhere, not just underground!)
+    You'll want thirty-seven iron in order to be able to progress to the next step. 
+    Iron is fairly easy to find and it's recommended to get a stack but it's not necessary.
+    The easiest way to mine is just to keep digging straight in the same direction. That way you'll also be collecting building blocks at the same time!
+    Stay safe in the mines!
+  </p>
+
+  <p class="body-text">Once you return from the mines, you're going to want to upgrade your tools.
+    First, smelt your raw iron into iron ingots. This is done by smelting them in a furnace the same way you would cook food.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_image_iron_ore_smelting_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Then you're going to craft your new tools using the same recipes as previous.
+    Just replace the stone with iron. Then we're going to create some armor and new tools to protect yourself!
+    The first piece of armor is a helmet. Place three iron all in the top row. 
+    Then one iron in the middle left cell and one in the middle right.
+    Secondly is a chest plate. 
+    The chest plate is the most important piece of armor as it covers the most of your body. 
+    It's also the most expensive to make. The chest plate is made by filling every single cell except for the top center cell.
+    Next we are going to make leggings.
+    Leggings are every single cell except for the center cell and the one below it.
+    Finally, boots are the bottom left and right cells, and one cell above both of those.
+    Below are images if you're confused.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_make_iron_helmet_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_make_iron_chestplate_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_make_iron_leggings_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_make_iron_boots_html.png" alt="Main Image" class="main-image">
+  
+
+  <p class="body-text"><p class="body-text">Now we are going to be crafting a shield and a water bucket! A shield is a very complicated recipe.
+    To craft a shield place a plank in every single cell. Remove the plank from the top center, bottom right, and bottom left.
+    In the newly opened top center, place a single iron ingot. Now you have a shield!
+    Let's equip our armor now. Open your inventory. Drag your armor onto the cooresponding cell next to your character.
+    You can tell where each piece of armos is supposed to go based on the background of the cell. There is an extra one for your shield too!
+    To use your shield, crouch by holding shift.
+  </p>
+  <img src="nether_prep_images/nether_prep_make_shield_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_armor_equip_1_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_armor_equip_2_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text"><p class="body-text">Lets craft our bucket. The bucket is simple. Just place iron ingots in the top left cell, middle cell, top right cell.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_make_bucket_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text"><p class="body-text">The next step is a Bow and Arrow. To collect arrows, just kill a lot of Skeletons! Theres a different way to get arrows,
+    however, it's good to practice combat for new players. This seperate method will be discussed in a separate section. 
+    Collect a stack of arrows. A stack is sixty-four of an item. This is the maximum a cell can hold for the majority of items.
+    While you're killing Skeletons, kill some Spiders. You'll also need three string for the bow. Once this is done, you're ready to craft your bow!
+  </p>
+
+  <p class="body-text"><p class="body-text">To make your bow, place a stick in the top center, left middle, and bottom center. 
+    Then from top to bottom on the right, add your string!
+  </p>
+
+  <img src="nether_prep_images/nether_prep_make_bow_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">A bow can be fired as long as you have arrows in your inventory.
+    Arrows do not need to be in your hotbar to be used. 
+    To fire a bow, hold down left click with the bow equiped.
+    The longer you hold it, the farther the arrow will travel.
+    If you hold until the bow is fully drawn, that is the farthest that arrows can travel.
+    To tell if the bow is fully drawn, you'll notice that the string on the bow has stopped being pulled back.
+    When a bow fires, it expends one arrow, and takes durability off of the bow. 
+    If your arrow doesn't hit a creature or mob, you can pick it back up.
+    You however cannot pick up fired arrows from Skeletons.
+  </p>
+
+  <img src=end_preparations_images/end_preparations_bucket_crafting_recipe_html.png alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    Let's fill up our water bucket!
+    All you have to do is go to a water source such as a lake, river, or ocean, and right click on the water.
+    Your bucket should then turn blue at the top showing it has water in it!
+  </p>
+
+  <img src=end_preparations_images/end_preparations_image_bow_and_arrow_full_draw_html.png alt="Main Image" class="main-image">
+  
+  <p class="body-text">
+    You're almost ready for the Nether!
+    Now you need to get some diamonds and some gold.
+    This means going back into the mines! Choose a Y level between negative fifty-three and negative fiftey-eight. This is where you'll find diamonds.
+    For the Nether, you'll need eight gold and three diamonds. Below is what diamonds (top) and gold (middle/bottom) look like!
+  </p>
+
+  <img src="end_preparations_images/end_preparations_image_deepslate_diamonds_texture_html.png" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_gold_ore_html.jpg" alt="Main Image" class="main-image">
+  <img src="nether_prep_images/nether_prep_gold_ore_deepslate_html.webp" alt="Main Image" class="main-image">
+
+
+  <p class="body-text">
+    Hopefully while you've been mining for your diamonds and gold, you found a lava pool in a cave. If you did, take your water bucket down to the lava pool.
+    Before that though, refering to previous recipes, craft a diamond pickaxe. No lesser pickaxe will work.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_lava_1_html.png" alt="Main Image" class="main-image">
+
+  
+  <p class="body-text">
+    Place your water bucket by the edge of the pool and watch it flow over all of the lava! You'll need to use your diamond pickaxe to mine the obsidian.
+    This is a long tedious task but is needed for the Nether portal! Collect 14 obsidian. 
+    When mining obsidian, don't stand directly on top of the block you're mining, in case there's more lava underneath.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_lava_2_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    Once you have your obsidian return to the surfacea. Hopefully by this point, you have accidentally picked up some flint while mining.
+    Flint has a 10 percent chance of dropping instead of gravel when you destroy a gravel block. 
+    If you don't have flint, you need to keep placing your gravel blocks down until you get flint!
+    If you don't have any gravel blocks, they can be found underground at the same Y level as iron. Gravel can also be found at the surface in a select few biomes.
+    Below is what flint and gravel look like.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_flint_gravel_html.webp" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    Now we will need to craft Flint and Steel. Flint and Steel is used to light blocks on fire. Be careful because fire spreads quickly on wooden blocks!
+    To craft Flint and Steel, in a crafting table or your inventory crafting square, place an iron ingot next to flint. Refer to the picture below if you're confused.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_make_flint_and_steel_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+  Since Flint and Steel is technically a tool, it does have durability. ALWAYS bring a Flint and Steel with you into the Nether. 
+  This is explained in the Nether section.
+  </p>
+
+  <p class="body-text">
+    Lets Craft our Nether portal! First dig out 4 blocks from the ground. This will make our portal nice and flush with the ground.
+  </p>
+
+  <img src="nether_prep_images/nether_prep_portal_1.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    Then fill it in with obsidian.
+  </p>
+
+  <img src="nether_prep_images\nether_prep_portal_2.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    Then on each corner, build up 4 blocks with obsidian. To do this easily, stand directly on top of the block you want to build up from.
+    Look directly down and hold the spacebar and right click at the same time until you're four high!
+  </p>
+
+  <img src="nether_prep_images\nether_prep_portal_3.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    Then cover the gap at the top.
+  </p>
+
+  <img src="nether_prep_images\nether_prep_portal_4.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    Now take your Flint and Steel, and ignite one of the two exposed obsidian blocks on the bottom.
+  </p>
+
+  <img src="nether_prep_images\nether_prep_portal_5.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    You're portal will turn purple and open. It will begin to make whooshing sounds. That's how you know it worked!
+  </p>
+  <img src="nether_prep_images\nether_prep_portal_6.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">
+    In order to travel to the Nether, stand inside the purple, glass, frame of the portal for a few seconds. Then you will enter the Nether.
+  </p>
+
+  <p class="body-text">
+    Congrats! You're ready for...
+  </p>
+
+  <p class="body-text">
+    The Nether!
+  </p>
+
+  
+
+
+  <div class="scroll-test">
+  </div>
+
+  <div class="vignette-bottom"></div>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+      document.body.style.backgroundPosition = `center ${-scrollY * 0.5}px`;
+    });
+  </script>
+</body>
+</html>
