@@ -29,35 +29,26 @@
     }
 
     .title-container {
-  text-align: center;
-  padding: 40px 20px 20px;
-  margin-top: 20px;
-}
-
-
-
-
-h1 {
-  font-size: 70px;
-  margin: 0;
-  color: white;
-  font-family: 'Press Start 2P', cursive;
-  letter-spacing: -1px;
-  text-shadow: 
-    3px 3px 0 #2f2f2f,
-    1px 1px 0 #2f2f2f,
-    2px 2px 0 #2f2f2f,
-    3px 3px 0 #2f2f2f,
-    4px 4px 0 #2f2f2f,
-    5px 5px 0 #2f2f2f,
-    -1px -1px 0 rgba(255,255,255,0.3);
-  transform: perspective(100px) rotateX(5deg);
-}
-
-    .title-container {
       text-align: center;
       padding: 40px 20px 20px;
       margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 70px;
+      margin: 0;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      letter-spacing: -1px;
+      text-shadow: 
+        3px 3px 0 #2f2f2f,
+        1px 1px 0 #2f2f2f,
+        2px 2px 0 #2f2f2f,
+        3px 3px 0 #2f2f2f,
+        4px 4px 0 #2f2f2f,
+        5px 5px 0 #2f2f2f,
+        -1px -1px 0 rgba(255,255,255,0.3);
+      transform: perspective(100px) rotateX(5deg);
     }
 
     .content-grid {
@@ -113,6 +104,7 @@ h1 {
       margin: 40px auto;
       max-width: 80%;
     }
+
     .body-text {
       font-size: 36px;
       color: white;
@@ -128,7 +120,7 @@ h1 {
       align-items: flex-end;
       justify-content: center;
     }
-    
+
     .vignette-bottom {
       position: fixed;
       bottom: 0;
@@ -151,23 +143,24 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    .main-image {
-  display: block;
-  margin: 50px auto;
-  width: 55%;
-  height: auto; 
-  border: 4px solid white;
-  box-sizing: border-box;
-}
-.main-video {
-  display: block;
-  margin: 50px auto;
-  width: 55%;
-  aspect-ratio: 16 / 9;
-  border: 4px solid white;
-  box-sizing: border-box;
-}
 
+    .main-image {
+      display: block;
+      margin: 50px auto;
+      width: 55%;
+      height: auto; 
+      border: 4px solid white;
+      box-sizing: border-box;
+    }
+
+    .main-video {
+      display: block;
+      margin: 50px auto;
+      width: 55%;
+      aspect-ratio: 16 / 9;
+      border: 4px solid white;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -185,8 +178,7 @@ h1 {
     <a href="endgame.html" class="content-block">ENDGAME</a>
     <a href="about.html" class="content-block">ABOUT US</a>
   </div>
-  
-    
+
   <p class="welcome-message">About Us!</p>
 
   <iframe class="main-video" src="https://www.youtube.com/embed/EjLvjzjr3es" 
@@ -194,48 +186,44 @@ h1 {
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen>
-</iframe>
-  
-  <p class="body-text">The two students who created this webpage are two freshman students studying Game Design at Purdue University. Wanting to implement both elements of games and website-designing, we decided to combine both skills into one big project, thus creating this Minecraft-themed website. In this website, we used HTML coding as well as CSS decorating, studied the mechanics and distinct levels of Minecraft, and researched how using a video game can attract a specific group of people to view and look at our website. This website was made through an assignment in our class called CGT 141, where we were assigned to make a fully-functional website tailored to your interests and hobbies. Through it all, this porject has taught us many HTML and CSS skills, but also opened new ideas and perspectives in us to make for the future. </p>
+  </iframe>
+
+  <p class="body-text">
+    The two students who created this webpage are two freshman students studying Game Design at Purdue University. Wanting to implement both elements of games and website-designing, we decided to combine both skills into one big project, thus creating this Minecraft-themed website. In this website, we used HTML coding as well as CSS decorating, studied the mechanics and distinct levels of Minecraft, and researched how using a video game can attract a specific group of people to view and look at our website. This website was made through an assignment in our class called CGT 141, where we were assigned to make a fully-functional website tailored to your interests and hobbies. Through it all, this project has taught us many HTML and CSS skills, but also opened new ideas and perspectives in us to make for the future.
+  </p>
 
   <a href="https://www.minecraft.net/en-us" target="_blank" class="body-text" style="color: #00aaff; text-decoration: underline; display: block;">
     Visit the Official Minecraft Website!
   </a>
 
-  <form action="https://formsubmit.co/your@email.com" method="POST" class="body-text" style="margin-top: 60px;">
+  <!-- Contact Form -->
+  <form action="https://formsubmit.co/youremail@gmail.com?_next=https://yourgithubusername.github.io/about.html" method="POST" target="_self" class="body-text" style="margin-top: 60px;">
     <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" 
-           style="font-size: 20px; width: 80%; background-color: #f0f0f0; color: black;"><br><br>
-  
+    <input type="text" id="name" name="name" style="font-size: 20px; width: 80%; background-color: #f0f0f0; color: black;" required><br><br>
+
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" 
-           style="font-size: 20px; width: 80%; background-color: #f0f0f0; color: black;"><br><br>
-  
+    <input type="email" id="email" name="email" style="font-size: 20px; width: 80%; background-color: #f0f0f0; color: black;" required><br><br>
+
     <label for="feedback">Feedback on Website:</label><br>
-    <textarea id="feedback" name="feedback" rows="4" 
-              style="font-size: 20px; width: 80%; background-color: #f0f0f0; color: black;"></textarea><br><br>
-  
+    <textarea id="feedback" name="feedback" rows="4" style="font-size: 20px; width: 80%; background-color: #f0f0f0; color: black;" required></textarea><br><br>
+
     <label for="favorite-feature">Favorite feature:</label><br>
-    <select id="favorite-feature" name="favorite-feature" 
-            style="font-size: 20px; width: 82%; background-color: #f0f0f0; color: black;">
+    <select id="favorite-feature" name="favorite-feature" style="font-size: 20px; width: 82%; background-color: #f0f0f0; color: black;" required>
+      <option value="" disabled selected>Select an option</option>
       <option value="design">Design</option>
       <option value="content">Content</option>
-      <option value="images">Images</option>
+      <option value="video">Video</option>
       <option value="navigation">Navigation</option>
     </select><br><br>
-  
+
     <p style="margin: 0;">Would you recommend this site to a friend?</p>
-    <label><input type="radio" name="recommend" value="yes" style="transform: scale(1.2); margin-right: 8px;">Yes</label><br>
+    <label><input type="radio" name="recommend" value="yes" required style="transform: scale(1.2); margin-right: 8px;">Yes</label><br>
     <label><input type="radio" name="recommend" value="no" style="transform: scale(1.2); margin-right: 8px;">No</label><br><br>
-  
+
     <button type="submit" style="font-size: 24px; padding: 10px 20px; cursor: pointer;">Submit</button>
   </form>
-  
-  
-  
-  <div class="scroll-test">
-  </div>
 
+  <div class="scroll-test"></div>
   <div class="vignette-bottom"></div>
 
   <script>
