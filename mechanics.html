@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Webpage</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('background_images/minecraft_deepslate.jpg');
+      background-repeat: repeat;
+      background-size: 100vw auto;
+      background-attachment: scroll;
+      background-position: center top;
+      background-color: #b88a4d;
+      font-family: 'VT323', monospace;
+      line-height: 1.4;
+      min-height: 100vh;
+      transition: background-position 2s;
+    }
+
+    .title-container {
+  text-align: center;
+  padding: 40px 20px 20px;
+  margin-top: 20px;
+}
+
+
+
+
+h1 {
+  font-size: 70px;
+  margin: 0;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: -1px;
+  text-shadow: 
+    3px 3px 0 #2f2f2f,
+    1px 1px 0 #2f2f2f,
+    2px 2px 0 #2f2f2f,
+    3px 3px 0 #2f2f2f,
+    4px 4px 0 #2f2f2f,
+    5px 5px 0 #2f2f2f,
+    -1px -1px 0 rgba(255,255,255,0.3);
+  transform: perspective(100px) rotateX(5deg);
+}
+
+    .title-container {
+      text-align: center;
+      padding: 40px 20px 20px;
+      margin-top: 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      margin: 20px auto;
+      max-width: 95%;
+      padding: 10px;
+    }
+
+    .content-block {
+      background-image: url('background_images/minecraft_stone.jpg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      aspect-ratio: 16 / 9;
+      border: 3px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 0 #4C2F00;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 8px 0 rgba(0,0,0,0.3);
+      filter: brightness(1.3);
+    }
+
+    .content-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 15px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
+    }
+
+    .welcome-message {
+      font-size: 36px;
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 0 #000000;
+      margin: 40px auto;
+      max-width: 80%;
+    }
+    .body-text {
+      font-size: 36px;
+      color: white;
+      text-align: left;
+      text-shadow: 2px 2px 0 #000000;
+      margin: 40px auto;
+      max-width: 80%;
+    }
+
+    .scroll-test {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .vignette-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 12.5vh;
+      pointer-events: none;
+      z-index: 9999;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    }
+
+    @media (max-width: 1200px) {
+      .content-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .main-image {
+  display: block;
+  margin: 50px auto;
+  width: 55%;
+  height: auto;
+  border: 4px solid white;
+  box-sizing: border-box;
+}
+  </style>
+</head>
+<body>
+  <div class="title-container">
+    <h1>MINECRAFT</h1>
+  </div>
+
+  <div class="content-grid">
+    <a href="Minecraft TitlePage.html" class="content-block">HOME</a>
+    <a href="mechanics.html" class="content-block">GAME MECHANICS</a>
+    <a href="spawn.html" class="content-block">SPAWN</a>
+    <a href="nether-prep.html" class="content-block">NETHER PREPARATIONS</a>
+    <a href="nether.html" class="content-block">NETHER</a>
+    <a href="end-prep.html" class="content-block">END PREPARATIONS</a>
+    <a href="endgame.html" class="content-block">ENDGAME</a>
+    <a href="about.html" class="content-block">ABOUT US</a>
+  </div>
+  
+    
+  <p class="welcome-message">Game Mechanics</p>
+
+<p class="body-text"> Here is an introduction to the game mechanics of Minecraft. The Minecraft’s sandbox-like playstyle introduces a generated world, boasting of its endlessly expansive landscapes and interactive NPCs.
+  At the heart of Minecraft’s experience are a series of fundamental aspects that form the basis for gameplay: mining, crafting, combat, exploration, and survival. This list will layout the 5 different mehcanics, giving an in-depth explanation of each and how the player can master the five distinct but pivotal features of Minecraft.</p>
+
+<img src="spawn_images/spawn_image_base_html.png" alt="Main Image" class="main-image">
+
+<p class="body-text"> To start, mining is an essential mechanic in the game. This enables the player to progress and grow stronger. There are many ores, with each serving a different but useful purpose. Coal is good for fuel, while copper can be used for lightning rods and other miscallaneous reasons. Iron and diamonds can craft powerful equipment, while gold, redstone, and lapis are useful to buff the player and create machines. But in mining there also comes risks. A major risk are the environmental dangers that come with mining. Lava is found everywhere in the deep parts of the cave, catching unaware players who dig straight down. Now, spikes on the ceiling and the floor can also damage players, creating a dangerous turf to mine on. Caves also are generated in different ways, with some caves being narrow and deep which can cause players to fall to their death. Another risk are hostile mobs, which spawn in the dark parts of the mine. Mobs range from zombies to the warden, gaining power and strength as the player mines deeper. Another important aspect when it comes to mining are upgrading. Different ores can only be mined through different levels of pickaxes. For example, only a diamond pickaxe can mine obsidian, so the player must gather diamonds before going to the nether. Most importantly, to even use the ores, the player must use a furnace to smelt the ores into the bars form, allowing for crafting. Despite the many dangers and intracacies of mining, it is essential to the players success.   </p>
+
+<img src="spawn_images/ores.jpeg" alt="Main Image" class="main-image">
+<img src="spawn_images/Diamond_Ore_In_The_Cave.webp" alt="Main Image" class="main-image">
+
+<p class="body-text"> The next aspect in Minecraft is crafting, a primary apsect for the game and the basic skill to aquire. The player's inventory comes with a small crafting menu, only able to craft basic necessities such as torches and buttons. The more advanced crafting all lays within the crafting table, the foundation of all items. The crafting table opens a wide variety of items, spanning from dyes to diffrent kinds of blocks. Other crafting structures such as the stonecutter can craft diffreent more more specific items. There are many different guides to craft in Minevcraft, and it takes time to memorize all of the different recipes.</p>
+
+<img src="spawn_images/spawn_image_crafting_2_html.png" alt="Main Image" class="main-image">
+<img src="spawn_images/spawn_image_crafting_wooden_shovel_html.png" alt="Main Image" class="main-image">
+
+<p class="body-text"> Another important aspect in Minecraft is combat, where the player defends themselves from different kinds of hostile mobs. The main goal of the game is to defeat the Ender Dragon, so combat is heavily revelant in all levels of the game. The main tool to use against mobs are swords, but players have the option of using bows, crossbows, and maces. Mobs drop useful and necessary loot to progress through the game like ender pearls, emphasizing the need to fight. But be careful, mobs get stronger the farther away the player is from spawn, and mobs can come in different sizes. They have melee and ranged attacks, with some mobs having special combat attributes like the creeper. Through this, the player must be smart with combat: they must utilize tools well and understand when it is good to use which weapon. For example, enderman cannot be hit by ranged weapons, and mobs like blazes and ghasts and usually taken out by ranged weapons. Through this, the player must plan out attacking the mobs, and must be careful and smart because their strength should not be underlooked. Ultimately, combat in Minecraft is risky but cannot be avoided, making it another pivotal aspect of the game.</p>
+
+<img src="spawn_images/spawn_image_spider_html.png" alt="Main Image" class="main-image">
+
+<p class="body-text"> Exploration may be the most important aspect of Minecraft. This is how the player can find the necessary structures to not only boost their progression, but also to find shelter and valuables. In order to beat the game, the player must find the end stronghold and beat the ender dragon. Normally, the player would first look for a village or a ruined portal to find an early headstart. Other structures like temples, mansions, shipwrecks, and shrines can also be used for an early headstart, but are more rare. In the middle/late game, players would seek strongholds and mazes, unlocking them rewards and high level loot. Exploration is necessary for the player to beat the game, and it encompasses the other apsects because it requires the player to mine, build, craft, and kill to explore.</p>
+
+<img src="spawn_images/spawn_image_tree_html.png" alt="Main Image" class="main-image">
+
+<p class="body-text"> Survival is the last aspect of Minecraft. In order to progress, survivability is key. Losing all your items when you die can push you far back, so it is necessary to stay alive. But fortunately for the pleyer, there are many ways to keep the player alive and strong. Potions, totems, and food are the primary ways to keep the player healthy. Armor and weapons also fend off monsters at night and reduce incoming damage. Despite the many ways the player can keep themselves safe, staying alive is still key to progressing and thus also encompasses the other attributes of Minecraft. </p>
+
+<div class="vignette-bottom"></div>
+
+<img src="spawn_images/spawn_image_sword_recipe_html.png" alt="Main Image" class="main-image">
+
+
+<script>
+  window.addEventListener('scroll', function () {
+    const scrollY = window.scrollY;
+    document.body.style.backgroundPosition = `center ${-scrollY * 0.5}px`;
+  });
+</script>
+</body>
+</html>

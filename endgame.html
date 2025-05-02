@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minecraft Webpage</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('background_images/minecraft_endstone.jpg');
+      background-repeat: repeat;
+      background-size: 100vw auto;
+      background-attachment: scroll;
+      background-position: center top;
+      background-color: #b88a4d;
+      font-family: 'VT323', monospace;
+      line-height: 1.4;
+      min-height: 100vh;
+      transition: background-position 2s;
+    }
+
+    .title-container {
+  text-align: center;
+  padding: 40px 20px 20px;
+  margin-top: 20px;
+}
+
+
+
+
+h1 {
+  font-size: 70px;
+  margin: 0;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: -1px;
+  text-shadow: 
+    3px 3px 0 #2f2f2f,
+    1px 1px 0 #2f2f2f,
+    2px 2px 0 #2f2f2f,
+    3px 3px 0 #2f2f2f,
+    4px 4px 0 #2f2f2f,
+    5px 5px 0 #2f2f2f,
+    -1px -1px 0 rgba(255,255,255,0.3);
+  transform: perspective(100px) rotateX(5deg);
+}
+
+    .title-container {
+      text-align: center;
+      padding: 40px 20px 20px;
+      margin-top: 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      margin: 20px auto;
+      max-width: 95%;
+      padding: 10px;
+    }
+
+    .content-block {
+      background-image: url('background_images/minecraft_stone.jpg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      aspect-ratio: 16 / 9;
+      border: 3px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 0 #4C2F00;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 8px 0 rgba(0,0,0,0.3);
+      filter: brightness(1.3);
+    }
+
+    .content-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 15px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
+    }
+
+    .welcome-message {
+      font-size: 36px;
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 0 #000000;
+      margin: 40px auto;
+      max-width: 80%;
+    }
+    .body-text {
+      font-size: 36px;
+      color: white;
+      text-align: left;
+      text-shadow: 2px 2px 0 #000000;
+      margin: 40px auto;
+      max-width: 80%;
+    }
+
+    .scroll-test {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .vignette-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 12.5vh;
+      pointer-events: none;
+      z-index: 9999;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    }
+
+    @media (max-width: 1200px) {
+      .content-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .main-image {
+  display: block;
+  margin: 50px auto;
+  width: 55%;
+  height: auto;
+  border: 4px solid white;
+  box-sizing: border-box;
+}
+  </style>
+</head>
+<body>
+  <div class="title-container">
+    <h1>MINECRAFT</h1>
+  </div>
+
+  <div class="content-grid">
+    <a href="Minecraft TitlePage.html" class="content-block">HOME</a>
+    <a href="mechanics.html" class="content-block">GAME MECHANICS</a>
+    <a href="spawn.html" class="content-block">SPAWN</a>
+    <a href="nether-prep.html" class="content-block">NETHER PREPARATIONS</a>
+    <a href="nether.html" class="content-block">NETHER</a>
+    <a href="end-prep.html" class="content-block">END PREPARATIONS</a>
+    <a href="endgame.html" class="content-block">ENDGAME</a>
+    <a href="about.html" class="content-block">ABOUT US</a>
+  </div>
+  
+    
+  <p class="welcome-message">The End</p>
+
+  <img src="endgame_images/endgame_image_main_image_html.webp" alt="Main Image" class="main-image">
+
+  <p class="body-text">Congrats! You've made it to the End Dimension! You're ready to start your battle with the Ender Dragon!
+  </p>
+
+  <p class="body-text">When you spawn in the End, you're going to spawn on an obsidian platform. You'll usually either be floating, or surrounded by Endstone.
+    If you're floating, you'll need to bridge over to the island using blocks. 
+    If you're underground, you'll need to dig your way up to the island. Below is an example of each.
+  </p>
+
+  <img src="endgame_images/endgame_image_spawn_platform_floating_html.webp" alt="Main Image" class="main-image">
+  <img src="endgame_images/endgame_image_spawn_platform_in_ground_html.webp" alt="Main Image" class="main-image">
+
+  <p class="body-text">Once you're on the main island, first thing to remember is to not look directly at the Enderman.
+    It doesn't matter what skill level you're at, it will happen on accident. If an Enderman starts to attack you, place a water bucket down beneath you.
+    Enderman can't touch water so this will keep you safe while they try to attack. This will allow you to kill them and continue your fight!
+    Don't forget to use you shield if you need to by crouching to protect yourself if needed!
+  </p>
+
+  <img src="endgame_images/endgame_image_water_bucket_enderman_save.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Now that you know how to defend yourself against the Enderman. Look out for the Dragons Breath. 
+    Dragons Breath causes damage to players during the battle. It is a purple lingering effect that the dragon sprays at you.
+    If it hits you get out of the purple area as soon as you can! Your shield will not protect you from dragons breath.
+  </p>
+
+  <img src="endgame_images/endgame_image_dragons_breath_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">You should see these large dark obsidian towers with a crystal at the top. Below is an image of them.
+  </p>
+
+  <img src="endgame_images/endgame_image_obsidian_towers_html.png" alt="Main Image" class="main-image">
+
+
+  <p class="body-text">You're first goal in the end is to destroy the crystals at the top of the end towers. 
+    This can be done for most of the towers using your bow.
+  </p>
+  
+  <img src="endgame_images/endgame_image_tower_destroy_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">There are some towers that have cages. To destroy these crystals, build up the corner of the tower.
+    To do this, equip a block, look straight down, and simultaneously hold the right click on your mouse, and the spacebar.
+    You should hit your head on the corner of the cage once you're at the top. 
+    Break only the one block on bottom corner of the cage and the one above it. This is the one you hit your head on.
+    Crouch and destroy the crystal by hitting it with your sword! Be wary when towering up the edges of the towers.
+    The Dragon can knock you off and you will have to pull a manuever called a water clutch. This will be covered momentarily.
+  </p>
+
+  <img src="endgame_images/endgame_image_cage_tower_destroy_html.png" alt="Main Image" class="main-image">
+  <img src="endgame_images/endgame_image_cage_tower_destroy_2_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">The reason you have to destroy the crystals is because the Ender Dragon uses them to heal. 
+    You can see the health bar in the top of your screen.
+    When the Dragon is near a crystal, the crystal sends a beam which heals the Dragon. This can be seen in the image below.
+  </p>
+
+  <img src="endgame_images/endgame_image_dragon_trail_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Once you've destroyed all of the crystals, you're ready to fight the Ender Dragon! 
+    You may have noticed while completing these previous steps that the Dragon has four phases.
+    The first phase is what we will call the home phase.
+    The dragon is stationary above the Bedrock pillar in the center of the island.
+    When the Dragon is in this position you can hit it with your sword. 
+    BE WARY though. When the the Dragon enters its second phase, it will launch you really high in the air!
+    The best way to save yourself is what is called a water clutch. 
+    This is done by using a water bucket to place water on the ground right before you land to save your fall.
+    This is a very difficult task to pull off. If you die it's okay! 
+    It happens to everyone. Jump back in that portal, grab your items, and continue the fight!
+  </p>
+
+  <img src="endgame_images/endgame_image_dragon_launch_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">The second phase is the takeoff phase. This is where the Dragon flys up to it's cruising altitude.
+    The third phase is it's main flying phase where it flys around different end crystals to heal. 
+    This phase still commences even if there are no crystals left.
+    The fourth phase is its homing phase where it both adjusts it's flight, and lowers it's altitude to fly right back into the first phase.
+  </p>
+
+  <p class="body-text">In phases two through four, these are opportunities to shoot the Dragon with your bow.
+    When it's in it's main home phase, arrows will bounce right off of the Dragon. 
+    Hitting it with your sword and shooting it with arrows is the fastest way to kill the Dragon.
+    However, solely relying on arrows is the safest way. You choose how you want to fight the Dragon!
+  </p>
+
+  <p class="body-text">You'll know you've defeated the Ender Dragon once the health bar is at zero. 
+    It will start emmiting light and making a loud screeching sound.
+  </p>
+
+  <img src="endgame_images/endgame_image_ender_dragon_dead_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Once this is finished you'll notice two things. Firstly, there is a lot of experience points on the ground.
+    Feel free to pick all of those up! Secondly, there is a purple egg on the Bedrock pillar above the now open portal.
+  </p>
+
+  <img src="endgame_images/endgame_image_ender_egg_exp_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">Now don't jump into the portal just yet! You want to collect that egg as there is only one in the entire Minecraft world.
+     Go ahead and click on the egg! You'll notice a purple trail that travels a few blocks. If you follow it you'll see the egg. Don't click it again.
+     The egg cannot be broken like a block.
+  </p>
+
+  <img src="endgame_images/endgame_image_ender_dragon_egg_pickup_1_html.png" alt="Main Image" class="main-image">
+
+  <p class="body-text">To collect the egg, dig out the area underneath of it without breaking the block it's sitting on.
+    Then place a torch underneath. Then you can break the block that it's sitting on.
+    The egg will fall and become an item. Then you can pick it up!
+ </p>
+
+ <img src="endgame_images/endgame_image_ender_dragon_egg_pickup_2_html.png" alt="Main Image" class="main-image">
+ <img src="endgame_images/endgame_image_ender_dragon_egg_pickup_3_html.png" alt="Main Image" class="main-image">
+
+ <p class="body-text">Collect your egg. You can do as you please with it. Build a shrine in your base, put in in a chest or item frame. Whatever you want!
+  Return to the portal and jump in to roll credits and return to the Overworld.
+</p>
+
+<img src="endgame_images/endgame_image_portal_finish_html.png" alt="Main Image" class="main-image">
+
+<p class="body-text">CONGRATS!!! YOU'VE BEAT MINECRAFT AND CONQUERED THE END!
+</p>
+
+  <div class="scroll-test">
+  </div>
+
+  <div class="vignette-bottom"></div>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+      document.body.style.backgroundPosition = `center ${-scrollY * 0.5}px`;
+    });
+  </script>
+</body>
+</html>
